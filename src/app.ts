@@ -1,11 +1,10 @@
 import express from "express";
+import { startNow } from "./controllers/authenticationController.ts";
 
 const app = express();
 
 app.use(express.json());
 
-app.get("/", (_req, res) => {
-  res.json({ message: "ServiceTimer API running 🚀" });
-});
+app.get("/startNow", startNow);
 
 export default app;
