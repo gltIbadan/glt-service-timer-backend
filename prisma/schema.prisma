@@ -130,3 +130,23 @@ model TempProgram {
 
   @@index([id, title])
 }
+
+
+/// ===============
+// Temporary Timer
+/// ===============
+
+
+model TempTimer {
+  id          Int              @id            @default(autoincrement())
+  title       String?
+  duration    String
+  startTime   String
+  endTime     String
+  lead        String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  userId      String
+
+  @@index([id, title])
+}
